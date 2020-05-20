@@ -9,7 +9,7 @@ setup(name='tap-postgres',
       url='https://singer.io',
       classifiers=['Programming Language :: Python :: 3 :: Only'],
       install_requires=[
-          'singer-python==5.3.1',
+          'singer-python==5.9.0',
           'psycopg2==2.8.5',
           'psycopg2-binary==2.8.5',
           'strict-rfc3339==0.7',
