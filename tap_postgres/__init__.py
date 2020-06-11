@@ -389,7 +389,7 @@ def discover_db(connection):
     for key, value in table_info.items():
         for key in keys_to_remove:
             try:
-                del dict[key]
+                del value[key]
             except KeyError:
                 pass
     print ('--------------')
