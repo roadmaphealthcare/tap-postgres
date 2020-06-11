@@ -391,10 +391,7 @@ def discover_db(connection):
             try:
                 del value[key]
             except KeyError:
-                pass
-    print ('--------------')
-    print (table_info)
-            
+                pass            
 
     db_streams = discover_columns(connection, table_info)
     return db_streams
