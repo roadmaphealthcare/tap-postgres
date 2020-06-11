@@ -387,12 +387,12 @@ def discover_db(connection):
     keys_to_remove = [activities, addresses, alerts, announcements, appointments, ar_internal_metadata, bundle_entities, bundles, care_gaps, care_pods, categories, category_links, claim_categories, claims, dashboard_metrics, deliverables, devices, doctors, educations, employee_care_gaps, employee_plans, employee_statuses, employees, facilities, feedbacks, health_concerns, health_concerns_educations, insurance_benefit_tiers, interaction_modalities, interaction_topics, interactions, invites, mailboxer_conversation_opt_outs, mailboxer_conversations, mailboxer_notifications, mailboxer_participants, mailboxer_receipts, muted_activities, navigator_note_samples, on_demand_ticket_messages, on_demand_tickets, organization_health_concerns, organization_plans, organizations, partner_cards, permissions, pg_search_documents, plan_types, plans, procedures, products, risk_scores, roadmap_entities, roadmap_items, roadmaps, roadmaps_educations, roles, saml_identifiers, schema_migrations, score_sources, scores, secure_uploads, services, settings, specialties, specialty_links, spendings, tag_links, tags, third_party_admins, ticket_comments, ticket_deliverables, ticket_states, ticket_transitions, ticket_types, tickets, uploads, user_care_pods, user_doctors, user_facilities, users, users_roles, versions]
     table_info = produce_table_info(connection)
     for key, value in table_info.items():
-        print(key, 'is the key for the value', value)
         for key in keys_to_remove:
             try:
                 del dict[key]
             except KeyError:
                 pass
+    print ('--------------')
     print (table_info)
             
 
