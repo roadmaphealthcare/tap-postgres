@@ -385,7 +385,9 @@ def discover_columns(connection, table_info):
 
 def discover_db(connection):
     table_info = produce_table_info(connection)
-    print (type(table_info))
+    for key, value in table_info.items():
+        print(key, 'is the key for the value', value)
+
     db_streams = discover_columns(connection, table_info)
     return db_streams
 
